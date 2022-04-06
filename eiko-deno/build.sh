@@ -1,1 +1,1 @@
-docker build -t eiko-deno:1.20.4-beta.0 -f Dockerfile .
+docker build -t ddosakura/eiko-deno:1.20.4-beta.0 -f Dockerfile .

@@ -6,4 +6,4 @@ const VERSION_BETA = '-beta.0'
 const file = String(await fs.readFile(`./Dockerfile`))
 const [from, ...rest] = file.split('\n')
 await fs.writeFile(`./Dockerfile`, [`FROM denoland/deno:${DENO_VERSION}`, ...rest].join('\n'))
-await fs.writeFile(`./build.sh`, `docker build -t eiko-deno:${DENO_VERSION}${VERSION_BETA} -f Dockerfile .`)
+await fs.writeFile(`./build.sh`, `docker build -t ddosakura/eiko-deno:${DENO_VERSION}${VERSION_BETA} -f Dockerfile .`)
