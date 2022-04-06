@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 
-# RUN useradd -ms /bin/bash deno
-# USER deno
+RUN useradd -ms /bin/bash deno
+USER deno
 
 RUN apt-get update
 RUN apt-get -y install wget curl unzip
