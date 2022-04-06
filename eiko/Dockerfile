@@ -15,4 +15,5 @@ RUN /bin/bash -c "source /home/deno/.bash_profile"
 # ENV PATH="$DENO_INSTALL/bin:$PATH"
 # ENV DVM_DIR="/home/deno/.dvm"
 # ENV PATH="$DVM_DIR/bin:$PATH"
-RUN dvm install 1.20.4
+
+# RUN dvm install 1.20.4
