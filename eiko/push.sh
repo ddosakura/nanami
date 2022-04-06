@@ -1,1 +1,1 @@
-docker push ddosakura/eiko:0.0.0-beta.0
+docker push ddosakura/eiko:0.0.0-beta.1
