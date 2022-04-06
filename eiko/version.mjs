@@ -1,7 +1,7 @@
 #!/usr/bin/env zx
 
 const IMAGE_NAME = 'ddosakura/eiko'
-const IMAGE_VERSION = '0.0.0-beta.2'
+const IMAGE_VERSION = '0.0.0'
 const BASE_IMAGE = 'ubuntu:20.04'
 const DENO_VERSION = '1.20.4'
 
