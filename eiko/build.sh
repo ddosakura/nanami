@@ -1,1 +1,1 @@
-docker build -t ddosakura/eiko:0.0.0-beta.2 -f Dockerfile .
+docker build -t ddosakura/eiko:0.0.0 -f Dockerfile .
