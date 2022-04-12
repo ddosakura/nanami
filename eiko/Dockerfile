@@ -1,4 +1,5 @@
-FROM ubuntu:20.04
+# FROM ubuntu:20.04
+FROM jrottenberg/ffmpeg:5.0.1-ubuntu2004
 
 RUN apt-get update
 RUN apt-get -y install wget curl unzip git
