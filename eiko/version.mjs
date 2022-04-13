@@ -1,9 +1,9 @@
 #!/usr/bin/env zx
 
 const IMAGE_NAME = 'ddosakura/eiko'
-const IMAGE_VERSION = '0.1.0'
+const IMAGE_VERSION = '0.1.1'
 const BASE_IMAGE = 'jrottenberg/ffmpeg:5.0.1-ubuntu2004'
-const DENO_VERSION = '1.20.4'
+const DENO_VERSION = '1.20.5'
 
 const file = String(await fs.readFile(`./Dockerfile`))
 await fs.writeFile(`./Dockerfile`, file.split('\n').map(line => {
