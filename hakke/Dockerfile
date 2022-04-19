@@ -4,10 +4,10 @@ FROM ubuntu:20.04
 
 RUN apt-get update && apt-get -y install wget curl unzip git && apt-get clean
 
-# RUN useradd -ms /bin/bash ubuntu
-# USER ubuntu
-# ARG HOME="/home/ubuntu"
-ARG HOME="/root"
+# ARG HOME="/root"
+RUN useradd -ms /bin/bash ubuntu
+USER ubuntu
+ARG HOME="/home/ubuntu"
 
 # === deno ===
 
