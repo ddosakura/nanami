@@ -9,8 +9,8 @@ const NODE_VERSION = '16.14.2'
 const file = String(await fs.readFile(`./Dockerfile`))
 await fs.writeFile(`./Dockerfile`, file.split('\n').map(line => {
     if (line.startsWith('FROM ')) return `FROM ${BASE_IMAGE}`
-    if (line.startsWith('RUN dvm install')) return `RUN dvm install ${DENO_VERSION}`
-    if (line.startsWith('RUN nvm install')) return `RUN nvm install ${NODE_VERSION}`
+    if (line.startsWith('ARG DENO_VERSION=')) return `ARG DENO_VERSION=${DENO_VERSION}`
+    if (line.startsWith('ARG NODE_VERSION=')) return `ARG NODE_VERSION=${NODE_VERSION}`
     return line
 }).join('\n'))
 await fs.writeFile(`./build.sh`, `docker build -t ${IMAGE_NAME}:${IMAGE_VERSION} -f Dockerfile .`)
