@@ -20,5 +20,7 @@ RUN /bin/bash -c "source $HOME/.bash_profile && dvm install $DENO_VERSION"
 # === node ===
 
 ARG NODE_VERSION=16.14.2
+ARG NVM_DIR /usr/local/nvm
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash \
+  && . $NVM_DIR/nvm.sh \
   && nvm install $NODE_VERSION
