@@ -14,9 +14,8 @@ ARG HOME="/root"
 ARG DENO_VERSION=1.20.5
 # https://www.denojs.cn/manual/getting_started/installation
 # https://github.com/justjavac/dvm
-RUN curl -fsSL https://deno.land/x/dvm/install.sh | sh \
-  && source $HOME/.bash_profile \
-  && dvm install $DENO_VERSION
+RUN curl -fsSL https://deno.land/x/dvm/install.sh | sh
+RUN /bin/bash -c "source $HOME/.bash_profile && dvm install $DENO_VERSION"
 
 # === node ===
 
