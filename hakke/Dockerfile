@@ -2,8 +2,7 @@ FROM ubuntu:20.04
 
 # === base ===
 
-RUN apt-get update
-RUN apt-get -y install wget curl unzip git
+RUN apt-get update && apt-get -y install wget curl unzip git
 RUN apt-get clean
 
 # RUN useradd -ms /bin/bash ubuntu
