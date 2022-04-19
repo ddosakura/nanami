@@ -7,6 +7,8 @@ RUN apt-get clean
 
 # RUN useradd -ms /bin/bash ubuntu
 # USER ubuntu
+# ENV HOME="/home/ubuntu"
+ENV HOME="/root"
 
 # === deno ===
 
