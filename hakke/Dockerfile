@@ -21,4 +21,4 @@ RUN /bin/bash -c "source $HOME/.bash_profile && dvm install $DENO_VERSION"
 
 ARG NODE_VERSION=16.14.2
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-RUN /bin/bash -c "source $HOME/.bashrc && nvm install $NODE_VERSION"
+RUN /bin/bash -c "source $HOME/.bash_profile && nvm install $NODE_VERSION"
