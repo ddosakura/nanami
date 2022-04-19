@@ -1,0 +1,1 @@
+docker push ddosakura/hakke:0.0.0

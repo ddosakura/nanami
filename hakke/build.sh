@@ -1,0 +1,1 @@
+docker build -t ddosakura/hakke:0.0.0 -f Dockerfile .
