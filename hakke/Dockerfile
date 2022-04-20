@@ -2,7 +2,12 @@ FROM ubuntu:20.04
 
 # === base ===
 
-RUN apt-get update && apt-get -y install wget curl unzip git && apt-get clean
+RUN apt-get update && \
+  apt-get -y install wget curl unzip \
+  build-essential \
+  autoconf automake autotools-dev libtool xutils-dev \
+  git && \
+  apt-get clean
 
 # ARG HOME="/root"
 RUN useradd -ms /bin/bash ubuntu
@@ -29,4 +34,6 @@ RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | b
 
 # https://github.com/liuchong/docker-rustup
 ARG RUST_VERSION=1.60.0
-RUN curl https://sh.rustup.rs -sSf | sh -s -- --default-toolchain $RUST_VERSION -y
+RUN curl https://sh.rustup.rs -sSf | sh -s -- --default-toolchain $RUST_VERSION -y \
+  && . "$HOME/.cargo/env" \
+  && cargo install wasm-pack
