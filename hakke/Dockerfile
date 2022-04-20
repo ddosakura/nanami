@@ -24,3 +24,9 @@ ARG NVM_DIR="$HOME/.nvm"
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash \
   && . $NVM_DIR/nvm.sh \
   && nvm install $NODE_VERSION
+
+# === rust ===
+
+# https://github.com/liuchong/docker-rustup
+ARG RUST_VERSION=1.60.0
+RUN curl https://sh.rustup.rs -sSf | sh -s -- --default-toolchain $RUST_VERSION -y
