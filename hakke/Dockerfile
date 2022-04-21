@@ -14,13 +14,13 @@ RUN useradd -ms /bin/bash ubuntu
 USER ubuntu
 ARG HOME="/home/ubuntu"
 
-# === deno ===
+# === rust ===
 
-ARG DENO_VERSION=1.20.5
-# https://www.denojs.cn/manual/getting_started/installation
-# https://github.com/justjavac/dvm
-RUN curl -fsSL https://deno.land/x/dvm/install.sh | sh
-RUN /bin/bash -c "source $HOME/.bash_profile && dvm install $DENO_VERSION"
+# https://github.com/liuchong/docker-rustup
+ARG RUST_VERSION=1.60.0
+RUN curl https://sh.rustup.rs -sSf | sh -s -- --default-toolchain $RUST_VERSION -y \
+  && . "$HOME/.cargo/env" \
+  && cargo install wasm-pack
 
 # === node ===
 
@@ -35,10 +35,10 @@ RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | b
   # && corepack prepare pnpm@7.0.0-rc.7 --activate \
   && pnpm i -g zx
 
-# === rust ===
+# === deno ===
 
-# https://github.com/liuchong/docker-rustup
-ARG RUST_VERSION=1.60.0
-RUN curl https://sh.rustup.rs -sSf | sh -s -- --default-toolchain $RUST_VERSION -y \
-  && . "$HOME/.cargo/env" \
-  && cargo install wasm-pack
+ARG DENO_VERSION=1.20.5
+# https://www.denojs.cn/manual/getting_started/installation
+# https://github.com/justjavac/dvm
+RUN curl -fsSL https://deno.land/x/dvm/install.sh | sh
+RUN /bin/bash -c "source $HOME/.bash_profile && dvm install $DENO_VERSION"
