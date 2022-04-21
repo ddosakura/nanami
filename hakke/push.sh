@@ -1,1 +1,1 @@
-docker push ddosakura/hakke:0.1.1
+docker push ddosakura/hakke:0.2.0

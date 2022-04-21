@@ -1,7 +1,7 @@
 #!/usr/bin/env zx
 
 const IMAGE_NAME = 'ddosakura/hakke'
-const IMAGE_VERSION = '0.1.1'
+const IMAGE_VERSION = '0.2.0'
 const BASE_IMAGE = 'ubuntu:20.04'
 const DENO_VERSION = '1.20.5'
 const NODE_VERSION = '16.14.2'
