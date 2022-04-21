@@ -28,11 +28,11 @@ ARG NODE_VERSION=16.14.2
 ARG NVM_DIR="$HOME/.nvm"
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash \
   && . $NVM_DIR/nvm.sh \
-  && nvm install $NODE_VERSION
+  && nvm install $NODE_VERSION \
   # 从 v16.13 开始，Node.js发布了用于管理包管理器的Corepack
-  && corepack enable
+  && corepack enable \
   # 将在您的系统上自动安装 pnpm。但是，它可能不是最新版本的 pnpm。要升级它，请检查最新的 pnpm 版本并运行：
-  # && corepack prepare pnpm@7.0.0-rc.7 --activate
+  # && corepack prepare pnpm@7.0.0-rc.7 --activate \
   && pnpm i -g zx
 
 # === rust ===
