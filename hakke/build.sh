@@ -1,1 +1,1 @@
-docker build -t ddosakura/hakke:0.2.0 -f Dockerfile .
+docker build -t ddosakura/hakke:0.2.1 -f Dockerfile .
