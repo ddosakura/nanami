@@ -33,7 +33,8 @@ RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | b
   # 从 v16.13 开始，Node.js发布了用于管理包管理器的Corepack
   && corepack enable \
   # 将在您的系统上自动安装 pnpm。但是，它可能不是最新版本的 pnpm。要升级它，请检查最新的 pnpm 版本并运行：
-  && corepack prepare $PNPM_VERSION --activate \
+  # 这里执行会报错，先不装
+  # && corepack prepare $PNPM_VERSION --activate \
   && pnpm i -g zx
 
 # === deno ===
