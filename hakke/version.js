@@ -14,7 +14,7 @@ await Deno.writeTextFile(`./Dockerfile`, file.split('\n').map(line => {
     if (line.startsWith('FROM ')) return `FROM ${BASE_IMAGE}`
     if (line.startsWith('ARG DENO_VERSION=')) return `ARG DENO_VERSION=${DENO_VERSION}`
     if (line.startsWith('ARG NODE_VERSION=')) return `ARG NODE_VERSION=${NODE_VERSION}`
-    if (line.startsWith('ARG PNPM_VERSION=')) return `ARG PNPM_VERSION=pnpm@${NODE_VERSION}`
+    if (line.startsWith('ARG PNPM_VERSION=')) return `ARG PNPM_VERSION=pnpm@${PNPM_VERSION}`
     if (line.startsWith('ARG RUST_VERSION=')) return `ARG RUST_VERSION=${RUST_VERSION}`
     return line
 }).join('\n'))
