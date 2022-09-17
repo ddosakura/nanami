@@ -3,7 +3,7 @@
 const IMAGE_NAME = 'ddosakura/hakke'
 const IMAGE_VERSION = '0.2.2'
 const BASE_IMAGE = 'ubuntu:20.04'
-const DENO_VERSION = '1.23.3'
+const DENO_VERSION = '1.25.3'
 const NODE_VERSION = '16.16.0'
 const PNPM_VERSION = '7.5.2'
 // const RUST_VERSION = 'stable'

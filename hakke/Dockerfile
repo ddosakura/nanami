@@ -39,7 +39,7 @@ RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | b
 
 # === deno ===
 
-ARG DENO_VERSION=1.23.3
+ARG DENO_VERSION=1.25.3
 # https://www.denojs.cn/manual/getting_started/installation
 # https://github.com/justjavac/dvm
 RUN curl -fsSL https://deno.land/x/dvm/install.sh | sh
