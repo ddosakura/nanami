@@ -1,5 +1,7 @@
 # [Koumei Project](https://github.com/ddosakura/koumei) Nanami Images
 
+**已迁移到 https://github.com/ddosakura/devcontainer-playground**
+
 本仓库负责编写 [Koumei Project](https://github.com/ddosakura/koumei) 所需的 Docker 镜像
 
 + eiko eiko 服务开发用镜像
